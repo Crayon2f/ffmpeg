@@ -26,8 +26,9 @@ public class Base {
     private void execute(String command, String exePath) {
 
         try {
-            System.out.println("command ---> " + exePath + command);
-            Process process  = runtime.exec(exePath + command);
+            String cmd = exePath + command + " -y -v quiet";
+            System.out.println(cmd);
+            Process process  = runtime.exec(cmd);
             BufferedInputStream bis = new BufferedInputStream(process.getInputStream());
             BufferedReader br = new BufferedReader(new InputStreamReader(bis));
             String lineString, result = "";
@@ -37,9 +38,9 @@ public class Base {
             System.out.println("result : " + result);
             bis.close();
             br.close();
-            System.out.println("execute success ----------------------- ");
+            System.out.println(" ----------------------- execute success ----------------------- ");
         } catch (IOException e) {
-            System.out.println("execute error ------------------------- ");
+            System.out.println(" ----------------------- execute error ------------------------- ");
             e.printStackTrace();
         }
     }

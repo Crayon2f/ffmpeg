@@ -17,8 +17,10 @@ public class Cut extends Base {
     @Test
     public void testCut() throws IOException {
 
+        File file = new File("D:\\downloads\\video\\JTSJ0090.mp4");
+        System.out.println(file.getParentFile().getName());
 //        cutWithStartAndEnd("C:\\Users\\feifan.gou\\Desktop\\download\\orig-2.mp4", "C:\\Users\\feifan.gou\\Desktop\\download", "00:00:05", "00:00:19");
-        cutWithDuration("C:\\Users\\feifan.gou\\Desktop\\download\\orig-4.mp4", "C:\\Users\\feifan.gou\\Desktop\\download", "00:00:07", "15");
+//        cutWithDuration("C:\\Users\\feifan.gou\\Desktop\\download\\orig-4.mp4", "C:\\Users\\feifan.gou\\Desktop\\download", "00:00:07", "15");
 
     }
 
